@@ -7,9 +7,30 @@ bridges:
 	- lengthFt: 100
 	  joiningHikers:
 		- name: A
-		  speedFtPerMinute: 11
+		  speedFtPerMinute: 100
+		- name: B
+		  speedFtPerMinute: 50
+		- name: C
+		  speedFtPerMinute: 20
+		- name: D
+		  speedFtPerMinute: 10  
 	
-	- lengthFt: 150
+	- lengthFt: 250
 	  joiningHikers:
 		- name: A
-		  speedFtPerMinute: 11
+		  speedFtPerMinute: 100
+		- name: B
+		  speedFtPerMinute: 50
+		- name: C
+		  speedFtPerMinute: 20
+		- name: D
+		  speedFtPerMinute: 10
+		- name: E
+		  speedFtPerMinute: 2.5
+	- lengthFt: 250
+	  joiningHikers:
+		- name: F
+		  speedFtPerMinute: 25
+		- name: G
+		  speedFtPerMinute: 15
+ 
