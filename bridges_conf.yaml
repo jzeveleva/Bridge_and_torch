@@ -1,0 +1,15 @@
+startingHikers:
+	- name: X
+	  speedFtPerMinute: 11
+	- name: Y
+	  speedFtPerMinute: 11
+bridges:
+	- lengthFt: 100
+	  joiningHikers:
+		- name: A
+		  speedFtPerMinute: 11
+	
+	- lengthFt: 150
+	  joiningHikers:
+		- name: A
+		  speedFtPerMinute: 11
