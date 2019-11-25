@@ -1,15 +1,28 @@
-startingHikers:
-	- name: X
-	  speedFtPerMinute: 11
-	- name: Y
-	  speedFtPerMinute: 11
-bridges:
-	- lengthFt: 100
-	  joiningHikers:
-		- name: A
-		  speedFtPerMinute: 11
-	
-	- lengthFt: 150
-	  joiningHikers:
-		- name: A
-		  speedFtPerMinute: 11
+- length: 100
+  hikers:
+    - name: A
+      speed: 100
+    - name: B
+      speed: 50
+    - name: C
+      speed: 20
+    - name: D
+      speed: 10 
+- length: 250
+  hikers:
+    - name: A
+      speed: 100
+    - name: B
+      speed: 50
+    - name: C
+      speed: 20
+    - name: D
+      speed: 10
+    - name: E
+      speed: 2.5
+- length: 250
+  hikers:
+    - name: F
+      speed: 25
+    - name: G
+      speed: 15
