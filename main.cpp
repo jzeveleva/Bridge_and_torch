@@ -45,6 +45,7 @@ void LoadConfiguration(vector<Bridge> &bridges)
 {
 	YAML::Node doc;
 	ifstream fin("C:\\Users\\Yulya Zeveleva\\source\\repos\\HikersProblem\\x64\\Release\\bridges-config.yaml");
+	//ifstream fin("bridges-config.yaml");
 	if (!fin)
 		cout << "While opening a file an error is encountered" << endl;
 	else
@@ -62,7 +63,7 @@ void LoadConfiguration(vector<Bridge> &bridges)
 	for (int i = 0; i < doc.size(); i++) {
 		Bridge bridge;
 		doc[i] >> bridge;
-		std::cout << bridge.length << endl;
+		//std::cout << bridge.length << endl;
 
 		bridges.push_back(bridge);
 	}
@@ -82,14 +83,14 @@ double SlowestPairsFirst(vector<Hiker> hikers)
 		if (i == 2)
 		{
 			crossTime += 100 / hikers[i].speed;
-			cout << " crossed in " << crossTime << endl;
+			
 			return crossTime;
 		}
 		crossTime += 100 / hikers[i].speed;
 		crossTime += bringBackTime;
 	}
 	crossTime -= 100 / hikers[0].speed;
-	cout << " crossed in " << crossTime << endl;
+	
 	return crossTime;
 }
 
@@ -103,7 +104,7 @@ double FastestRunner(vector<Hiker> hikers)
 		if (i == 1)
 		{
 			crossTime += 100 / hikers[i].speed;
-			cout << " crossed in " << crossTime << endl;
+			
 			return crossTime;
 		}
 		crossTime += 100 / hikers[i].speed;
@@ -133,8 +134,8 @@ double FindMinCrossingTime(Bridge& bridge)
 
 	double crossTime1 = SlowestPairsFirst(hikers);
 	double crossTime2 = FastestRunner(hikers);
-	cout << " Slowest pair crossed in " << crossTime1 << endl;
-	cout << " Fustest runner crossed in " << crossTime2 << endl;
+	cout << " \"Slowest pair first\" finished in " << crossTime1 << endl;
+	cout << " \"Fastest runner\" finished in " << crossTime2 << endl;
 	return min(crossTime1, crossTime2);
 }
 
@@ -148,6 +149,5 @@ void main()
 		cout << "Bridge of length " << bridge.length << endl;
 		minCrossingTime+= FindMinCrossingTime(bridge);
 	}
-	cout << "crossing time " << minCrossingTime;
+	cout << "Crossing time " << minCrossingTime;
 }
-
